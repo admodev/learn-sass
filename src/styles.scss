@@ -1,0 +1,58 @@
+@import "menu";
+@mixin fontStyle($colorMixins, $fontSize) {
+  color: $colorMixins;
+  font: {
+    size: $fontSize;
+  }
+  background: {
+    color: $bgMixins;
+  }
+  text: {
+    transform: uppercase;
+  }
+}
+
+$colorBG: salmon;
+$colorTitle: tomato;
+$heightDiv: 40vh;
+$heightNuevo: $heightDiv + 25vh;
+$width: 100vw;
+$bgMixins: green;
+
+.primerDiv {
+  background-color: $colorBG;
+  height: $heightNuevo + 10vh;
+  width: $width;
+}
+
+h1 {
+  color: $colorTitle;
+}
+
+h2 {
+  @include fontStyle(red, 40px);
+}
+
+p {
+  @include fontStyle(blue, 25px);
+}
+
+/* Layout responsive */
+.container {
+  width: 100%;
+  margin: 0 auto;
+
+  section {
+    float: left;
+    width: 200px / 600px * 100%;
+    height: 400px;
+    background-color: darkkhaki;
+  }
+
+  aside {
+    float: left;
+    width: 400px / 600px * 100%;
+    height: 400px;
+    background-color: darkturquoise;
+  }
+}

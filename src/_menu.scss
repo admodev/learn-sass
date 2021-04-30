@@ -1,0 +1,33 @@
+/*
+
+ESTO ES UN MÓDULO, HAY QUE AGREGARLE EL GUIÓN BAJO PARA QUE NO LO COMPILE EL COMPILADOR DE SASS Y DESPUÉS INCLUIRLO EN LA HOJA DE ESTILOS QUE SÍ VAMOS A COMPILAR.
+
+*/
+
+$anchorColor: #ffffff;
+$anchorBackground: blue;
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 60px 0;
+
+  li {
+    display: inline-block;
+
+    a {
+      text: {
+        decoration: none;
+        transform: uppercase;
+      }
+      font: {
+        family: "sans-serif";
+        size: 25px;
+      }
+      color: $anchorColor;
+      padding: 20px;
+      background-color: $anchorBackground;
+      margin: 2px;
+    }
+  }
+}
